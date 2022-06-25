@@ -3,5 +3,5 @@ class Category < ApplicationRecord
   has_many :operations
 
   validates :name, presence: true
-  validaye :icon, presence: true
+  validates :icon, presence: true
 end
