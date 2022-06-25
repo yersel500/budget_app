@@ -1,0 +1,6 @@
+<h1>Categories</h1>
+<% @categories.each do |category| %>
+  <h2><%= category.name %></h2>
+  <p><%= category.icon %></p>
+<% end %>
+<%= link_to 'Create New Category', new_user_category_path(user_id: @user.id)%>

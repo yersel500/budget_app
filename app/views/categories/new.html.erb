@@ -1,0 +1,20 @@
+<h1>Add a new Category</h1>
+<%= form_with model: @category, url: user_categories_path  do |form|%>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @category.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :icon %><br>
+    <%= form.text_area :icon %><br>
+    <% @category.errors.full_messages_for(:icon).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
