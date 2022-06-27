@@ -4,6 +4,7 @@ class CreateOperations < ActiveRecord::Migration[7.0]
       t.string :name
       t.decimal :amount
       t.references :category, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
