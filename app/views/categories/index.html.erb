@@ -3,5 +3,10 @@
 <% @categories.each do |category| %>
   <h2><%= category.name %></h2>
   <p><%= category.icon %></p>
+  <% sum = 0 %>
+  <% category.operations.each do |operation|%>
+    <% sum += operation.amount %>
+  <% end %>
+  <p>Total: $<%= sum %></p>
 <% end %>
 <%= link_to 'Create New Category', new_user_category_path(user_id: @user.id)%>
