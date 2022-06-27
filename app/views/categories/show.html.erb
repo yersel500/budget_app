@@ -1,0 +1,6 @@
+<h1><%= @category.name %></h1>
+<p><%= @category.icon %></p>
+<% @category.operations.each do |operation|%>
+  <p><%= operation.name%> Amount: $ <%= operation.amount %></p>
+<% end %>
+<%= link_to 'Add new operation', new_user_category_operation_path(user_id: params[:user_id], category_id: params[:id]) %>
