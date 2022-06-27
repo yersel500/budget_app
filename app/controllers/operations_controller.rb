@@ -1,4 +1,6 @@
 class OperationsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @operation = Operation.new
   end
