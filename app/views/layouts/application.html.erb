@@ -11,9 +11,15 @@
   </head>
   <body>
     <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
+      <% if type == 'notice' %>
+        <div class="p-4 text-green-700 border rounded border-green-900/10 bg-green-50" role="alert">
+          <%= msg %>
+        </div>
+      <% else%>
+        <div class="p-4 text-red-700 border rounded border-red-900/10 bg-red-50" role="alert">
+          <%= msg %>
+        </div>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>
