@@ -1,24 +1,67 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet) ![](https://img.shields.io/badge/MENGSTU-FENTAW-success) ![](https://img.shields.io/badge/YERSEL-HURTADO-success)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Budget App - Ruby on Rails
 
-Things you may want to cover:
+The Budeg App is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-* Ruby version
+![image](https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/capstone/images/erd_diagram.png?token=GHSAT0AAAAAABQDCG3L26Q5NPNKNB47BRCWYV4XX4A)
 
-* System dependencies
 
-* Configuration
+## Built with
 
-* Database creation
+    - Major languages: Ruby, Ruby on Rails, Tailwiind
+    - Technologies used: Rubocop, Gitflow, RSpec
 
-* Database initialization
+## Prerequisites
+    - Ruby installed on local system
+    - npm ( Node Package Manager )
+    - Git and Github Account  
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+  - Open terminal
+  - Change to the desired directory then run the following:
 
-* ...
+    - run `git clone git@github.com:yersel500/budget_app.git`
+    - cd budget_app/ 
+    - git switch dev
+    - run `npm install` or `yarn`
+    - run `bundle install`
+    - run `rails db:create`
+    - run `rails db:migrate`
+    - 
+## Running the Application Locally
+>**Steps to excute the app locally*
+  - Run `rails s` in the console at working directory
+
+## Application Live Demo
+  [Live Demo](https://shrouded-brushlands-11034.herokuapp.com/)
+
+## Author
+
+### 👤 Yersel Hurtado
+- GitHub: [@yersel500](https://github.com/yersel500/) 
+- Twitter: [@YerselHurtado](https://twitter.com/YerselHurtado)
+- LinkedIn: [Yersel Hurtado](https://www.linkedin.com/in/yersel-hurtado/) 
+
+## 🤝 Contributing
+
+ Contributions, issues, and feature requests are welcome!
+
+ Feel free to check the [issues page](https://github.com/yersel500/budget_app/issues).
+
+ ## Show your support
+
+ Give a ⭐️ if you like this project!
+
+ ## Acknowledgments
+
+ - Microverse: [microverse community](https://github.com/microverseinc)
+ - Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

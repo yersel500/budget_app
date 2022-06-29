@@ -1,0 +1,31 @@
+<div class="flex justify-between gap-5 w-full px-5 py-3 text-sm font-medium text-white bg-[#3778c2]">
+  <%= link_to root_path, class: "flex items-center" do %>
+    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+    </svg>
+  <% end%>
+</div>
+<div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+  <div class="max-w-lg mx-auto">
+    <h1 class="text-2xl font-bold text-center text-[#3778c2] sm:text-3xl">Add a new Category</h1>
+    <%= form_with model: @category, url: user_categories_path, class: "mt-8 space-y-6" do |form| %>
+      <div>
+        <%= form.label :name, class: "text-sm font-medium" %><br>
+        <%= form.text_field :name, class: "w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm" %>
+        <% @category.errors.full_messages_for(:name).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+      <div>
+        <%= form.label :icon, class: "text-sm font-medium" %><br>
+        <%= form.text_area :icon, class: "w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm" %><br>
+        <% @category.errors.full_messages_for(:icon).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+      <div>
+        <%= form.submit 'Create Category', class: "block w-full px-5 py-3 my-5 text-sm font-medium text-white bg-[#5fb523] rounded-lg" %>
+      </div>
+    <% end %>
+  </div>
+</div>
