@@ -59,6 +59,7 @@ To get a local copy up and running follow these simple example steps.
  ## Acknowledgments
 
  - Microverse: [microverse community](https://github.com/microverseinc)
+ - Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
 
 ## 📝 License
