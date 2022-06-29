@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
     <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
+      <% if type == 'notice' %>
+        <div class="p-4 text-green-700 border rounded border-green-900/10 bg-green-50" role="alert">
+          <%= msg %>
+        </div>
+      <% else%>
+        <div class="p-4 text-red-700 border rounded border-red-900/10 bg-red-50" role="alert">
+          <%= msg %>
+        </div>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>

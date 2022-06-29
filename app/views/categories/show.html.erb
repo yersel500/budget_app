@@ -1,6 +1,20 @@
-<h1><%= @category.name %></h1>
-<p><%= @category.icon %></p>
-<% @category.operations.each do |operation|%>
-  <p><%= operation.name%> Amount: $ <%= operation.amount %></p>
-<% end %>
-<%= link_to 'Add new operation', new_user_category_operation_path(user_id: params[:user_id], category_id: params[:id]) %>
+<div class="flex justify-between gap-5 w-full px-5 py-3 text-sm font-medium text-white bg-[#3778c2]">
+  <%= link_to user_categories_path(user_id: @category.user_id), class: "flex items-center" do %>
+    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+    </svg>
+  <% end%>
+  <div class="flex gap-1 items-center">
+    <%= image_tag @category.icon, class: "h-8 w-8" %>
+    <h1>Category: <%= @category.name %></h1>
+  </div>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-slate-200">
+  <% @category.operations.each do |operation|%>
+    <div class="flex justify-between p-4 bg-white border-gray-300 rounded-lg">
+      <p><%= operation.name%></p>
+      <p>Amount: $ <%= operation.amount %></p>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'Add new operation', new_user_category_operation_path(user_id: params[:user_id], category_id: params[:id]), class: "block w-11/12 mx-auto px-5 py-3 text-sm font-medium text-white bg-[#5fb523] rounded-lg" %>

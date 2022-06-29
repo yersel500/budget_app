@@ -21,8 +21,8 @@ class CategoriesController < ApplicationController
       flash[:notice] = 'The category was added successfully'
       redirect_to user_category_path(user_id: params[:user_id], id: @category.id)
     else
-      flash[:alert] = "Couldn't create the recipe!"
-      render :new
+      flash[:alert] = "Couldn't create the category!"
+      render :new, status: :unprocessable_entity
     end
   end
 
