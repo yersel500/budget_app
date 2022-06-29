@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'RecipePage', type: :system do
+RSpec.describe 'OperationsPage', type: :system do
   before :all do
     @user = User.create!(full_name: 'Babi',
                          email: 'b@g.com', password: '123456',
