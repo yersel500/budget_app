@@ -2,6 +2,7 @@ class OperationsController < ApplicationController
   load_and_authorize_resource
 
   def new
+    @category = Category.find(params[:category_id])
     @operation = Operation.new
   end
 
