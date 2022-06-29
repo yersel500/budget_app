@@ -11,7 +11,7 @@
 </div>
 <div class="flex flex-col gap-4 p-4 bg-slate-200">
   <% @category.operations.each do |operation|%>
-    <div class="flex justify-between p-4 bg-white border-gray-300 rounded-lg">
+    <div class="flex justify-between p-4 bg-white border-gray-300 rounded-lg my-operation">
       <p><%= operation.name%></p>
       <p>Amount: $ <%= operation.amount %></p>
     </div>
