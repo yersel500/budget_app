@@ -4,7 +4,7 @@
 
 The Budeg App is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-![image](https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/capstone/images/erd_diagram.png?token=GHSAT0AAAAAABQDCG3L26Q5NPNKNB47BRCWYV4XX4A)
+![image](https://img001.prntscr.com/file/img001/4fwXDdmZQAi627LgcTDslA.png)
 
 
 ## Built with
