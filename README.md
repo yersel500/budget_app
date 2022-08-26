@@ -9,7 +9,7 @@ The Budeg App is a mobile web application where you can manage your budget: you 
 
 ## Built with
 
-    - Major languages: Ruby, Ruby on Rails, Tailwiind
+    - Major languages: Ruby, Ruby on Rails, TailwindCss
     - Technologies used: Rubocop, Gitflow, RSpec
 
 ## Prerequisites
